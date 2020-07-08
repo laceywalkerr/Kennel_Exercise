@@ -4,6 +4,9 @@ import "./Kennel.css";
 import EmployeeCard from './employee/EmployeeCard';
 import OwnerCard from './owner/OwnerCard';
 import LocationCard from './location/LocationCard';
+import NavBar from "./nav/NavBar";
+import ApplicationViews from "./ApplicationViews";
+
 
 const Kennel = () => {
   return (
@@ -39,6 +42,7 @@ const Kennel = () => {
         <LocationCard />
       </div>
     </div>
+
   );
 };
 
