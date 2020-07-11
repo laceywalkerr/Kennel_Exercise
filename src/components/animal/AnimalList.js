@@ -7,6 +7,7 @@ const AnimalList = () => {
             console.log(animalsFromAPI);
         });
     };
+    
     useEffect(() => {
         console.log("useEffect");
         getAnimals();
