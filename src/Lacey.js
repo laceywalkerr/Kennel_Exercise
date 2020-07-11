@@ -4,7 +4,7 @@ function Lacey() {
 
     return (
         <div className="App">
-            <h2>Hello World</h2>
+            <h2>Hello World hi</h2>
         </div>
     );
 }
