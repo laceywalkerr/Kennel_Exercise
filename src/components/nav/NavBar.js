@@ -12,19 +12,36 @@ const NavBar = () => {
       </h1>
       <nav>
         <ul className="container">
+
           <li>
             <Link className="nav-link" to="/">
               Home
             </Link>
           </li>
+
           <li>
             <Link className="nav-link" to="/animals">
               Animals
             </Link>
           </li>
-          <li>Locations</li>
-          <li>Employees</li>
-          <li>Owners</li>
+
+          <li>
+            <Link classname="nav-link" to="/location">
+            Locations
+            </Link>
+            </li>
+
+          <li>
+            <Link classname="nav-link" to="/employee">
+            Employees
+            </Link>
+            </li>
+
+          <li>
+            <Link classname="nav-link" to="/owner">
+            Owners
+            </Link>
+            </li>
         </ul>
       </nav>
     </header>
