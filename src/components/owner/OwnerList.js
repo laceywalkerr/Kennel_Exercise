@@ -11,6 +11,11 @@ const OwnerList = () => {
     });
   };
 
+  const deleteOwner = id => {
+    OwnerManager.delete(id)
+      .then(() => OwnerManager.getAll().then(setOwners));
+  };
+
   useEffect(() => {
     getOwners();
   }, []);
@@ -19,7 +24,10 @@ const OwnerList = () => {
 return(
     <div className="container-cards">
       {owners.map(owner =>
-        <OwnerCard key={owner.id} owner={owner} />
+        <OwnerCard 
+        key={owner.id} 
+        owner={owner} 
+        deleteOwner={deleteOwner}/>
       )}
     </div>
   );

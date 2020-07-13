@@ -11,6 +11,11 @@ const AnimalList = () => {
     });
   };
 
+  const deleteAnimal = id => {
+    AnimalManager.delete(id)
+      .then(() => AnimalManager.getAll().then(setAnimals));
+  };
+
   useEffect(() => {
     getAnimals();
   }, []);
@@ -19,9 +24,15 @@ const AnimalList = () => {
 return(
     <div className="container-cards">
       {animals.map(animal =>
-        <AnimalCard key={animal.id} animal={animal} id={animal.id}/>
+        <AnimalCard 
+              key={animal.id} 
+              animal={animal} 
+              id={animal.id} 
+              deleteAnimal={deleteAnimal} />
       )}
     </div>
   );
 };
+
+
 export default AnimalList
