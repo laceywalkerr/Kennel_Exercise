@@ -5,7 +5,6 @@ import AnimalList from "./animal/AnimalList";
 import LocationList from "./location/LocationList";
 import EmployeeList from "./employee/EmployeeList";
 import OwnerList from "./owner/OwnerList";
-//only include these once they are built - previous practice exercise
 
 const ApplicationViews = () => {
   return (
