@@ -6,16 +6,15 @@
       "breed": "German Shepherd"
     },
     {
-    "id": 2,
-    "name": "Doodle",
-    "breed": "Poodle"
+      "id": 2,
+      "name": "Doodle",
+      "breed": "Poodle"
     },
     {
-    "id": 3,
-    "name": "Becky",
-    "breed": "Pug"
-      }
-    
+      "id": 3,
+      "name": "Becky",
+      "breed": "Pug"
+    }
   ],
   "employees": [
     {
@@ -27,11 +26,6 @@
       "id": 2,
       "name": "Bill",
       "job": "On Staff Vet"
-    },
-    {
-      "id": 3,
-      "name": "Karen",
-      "job": "Manager"
     }
   ],
   "owners": [
