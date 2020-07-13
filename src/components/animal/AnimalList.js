@@ -19,7 +19,7 @@ const AnimalList = () => {
 return(
     <div className="container-cards">
       {animals.map(animal =>
-        <AnimalCard key={animal.id} animal={animal.name} />
+        <AnimalCard key={animal.id} animal={animal} id={animal.id}/>
       )}
     </div>
   );
