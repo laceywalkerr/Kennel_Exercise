@@ -6,7 +6,6 @@ import Lacey from './Lacey.js';
 function App() {
   return (
     <div className="App">
-      <Lacey />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
