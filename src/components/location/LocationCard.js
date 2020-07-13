@@ -5,7 +5,7 @@ const LocationCard = props => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require('./location.png')} alt="Location Photo" />
+          <img src={require('./location.png')} alt="Location" />
         </picture>
         <h3>Location: <span className="card-locationname">
           {props.location.address}
