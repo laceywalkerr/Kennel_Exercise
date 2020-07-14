@@ -10,9 +10,7 @@ import LocationDetail from "./location/LocationDetail";
 import AnimalForm from './animal/AnimalForm';
 import Login from "./auth/Login";
 import AnimalEditForm from "./animal/AnimalEditForm";
-
-//[2]
-// import EmployeeWithAnimals from "./employee/EmployeeWithAnimals";
+import EmployeeWithAnimals from "./employee/EmployeeWithAnimals";
 
 const ApplicationViews = () => {
   const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
@@ -80,10 +78,10 @@ const ApplicationViews = () => {
           return <EmployeeList />;
         }}
       />
-      {/* [2] */}
-      {/* <Route path="/employees/:employeeId(\d+)/details" render={(props) => {
+      
+      <Route path="/employees/:employeeId(\d+)/details" render={(props) => {
       return <EmployeeWithAnimals {...props} />
-      }} /> */}
+      }} />
 
 
       <Route
