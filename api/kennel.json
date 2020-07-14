@@ -2,18 +2,28 @@
   "animals": [
     {
       "id": 1,
-      "name": "Decker",
+      "name": "Striker",
       "breed": "German Shepherd"
     },
     {
       "id": 2,
       "name": "Doodle",
-      "breed": "Poodle"
+      "breed": "Poodle",
+      "photo": "poodle.jpg",
+      "employeeId": 1
     },
     {
       "id": 3,
-      "name": "Becky",
-      "breed": "Pug"
+      "name": "Otis",
+      "breed": "Pug",
+      "photo": "pug.jpg",
+      "employeeId": 2
+    },
+    {
+      "name": "Elly",
+      "breed": "Elephant Seal",
+      "id": 4,
+      "employeeId": 3
     }
   ],
   "employees": [
@@ -26,6 +36,11 @@
       "id": 2,
       "name": "Bill",
       "job": "On Staff Vet"
+    },
+    {
+      "id": 3,
+      "name": "Karen",
+      "job": "Manager"
     }
   ],
   "owners": [
