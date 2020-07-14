@@ -12,10 +12,10 @@ const AnimalCard = props => {
           {props.animal.name}
         </span></h3>
         <p>Breed: {props.animal.breed}</p>
-        <button type="button" onClick={() => props.deleteAnimal(props.animal.id)}>Discharge</button>
         <Link to={`/animals/${props.animal.id}`}>
-  <button>Details</button>
-</Link>
+        <button>Details</button>
+        </Link>
+        <button type="button" onClick={() => props.deleteAnimal(props.animal.id)}>Discharge</button>
       </div>
     </div>
   );
