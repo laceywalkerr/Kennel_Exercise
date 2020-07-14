@@ -9,6 +9,7 @@ import AnimalDetail from "./animal/AnimalDetail";
 import LocationDetail from "./location/LocationDetail";
 import AnimalForm from './animal/AnimalForm';
 import Login from "./auth/Login";
+import AnimalEditForm from "./animal/AnimalEditForm";
 
 //[2]
 // import EmployeeWithAnimals from "./employee/EmployeeWithAnimals";
@@ -26,6 +27,21 @@ const ApplicationViews = () => {
       />
 
       <Route path="/login" component={Login} />
+
+      <Route path="/animals/:animalId(\d+)/edit" render={props => {
+        if (isAuthenticated()) {
+          return <AnimalEditForm {...props} />
+        } else {
+          return <Redirect to="/login" />
+        }
+      }} />
+      <Route exact path="/animals/:animalId(\d+)" render={props => {
+        if (isAuthenticated()) {
+          return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
+        } else {
+          return <Redirect to="/login" />
+        }
+      }} />
 
       <Route exact path="/animals" render={props => {
         if (isAuthenticated()) {

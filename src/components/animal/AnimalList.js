@@ -36,7 +36,9 @@ return(
                 key={animal.id} 
                 animal={animal} 
                 id={animal.id} 
-                deleteAnimal={deleteAnimal} />
+                deleteAnimal={deleteAnimal} 
+                {...props}
+           />
         )}
       </div>
     </>
