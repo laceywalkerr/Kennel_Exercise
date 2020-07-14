@@ -4,24 +4,28 @@
       "id": 1,
       "name": "Decker",
       "breed": "German Shepherd",
-      "photo": "Decker.jpg"
+      "photo": "Decker.jpg",
+      "employeeId": 1
     },
     {
       "id": 2,
       "name": "Doodle",
       "breed": "Poodle",
-      "photo": "poodle.jpg"
+      "photo": "poodle.jpg",
+      "employeeId": 1
     },
     {
       "id": 3,
       "name": "Otis",
       "breed": "Pug",
-      "photo": "pug.jpg"
+      "photo": "pug.jpg",
+      "employeeId": 2
     },
     {
       "name": "Elly",
       "breed": "Elephant Seal",
-      "id": 4
+      "id": 4,
+      "employeeId": 3
     }
   ],
   "employees": [
