@@ -17,6 +17,11 @@
       "name": "Otis",
       "breed": "Pug",
       "photo": "pug.jpg"
+    },
+    {
+      "name": "Elly",
+      "breed": "Elephant Seal",
+      "id": 4
     }
   ],
   "employees": [
@@ -31,9 +36,9 @@
       "job": "On Staff Vet"
     },
     {
-    "id": 3,
-    "name": "Karen",
-    "job": "Manager"
+      "id": 3,
+      "name": "Karen",
+      "job": "Manager"
     }
   ],
   "owners": [

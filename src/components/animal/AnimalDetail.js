@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AnimalManager from '../../modules/AnimalManager';
-import './AnimalDetail.css'
+import './AnimalDetail.css';
 
 const AnimalDetail = props => {
   const [animal, setAnimal] = useState({ name: "", breed: "" });

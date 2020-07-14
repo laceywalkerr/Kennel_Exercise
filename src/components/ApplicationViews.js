@@ -7,6 +7,7 @@ import EmployeeList from "./employee/EmployeeList";
 import OwnerList from "./owner/OwnerList";
 import AnimalDetail from "./animal/AnimalDetail";
 import LocationDetail from "./location/LocationDetail";
+import AnimalForm from './animal/AnimalForm';
 
 const ApplicationViews = () => {
   return (
@@ -24,11 +25,14 @@ const ApplicationViews = () => {
       exact
         path="/animals"
         render={props => {
-          return <AnimalList />;
+          return <AnimalList {...props} />;
         }}
       />
       <Route path="/animals/:animalId(\d+)" render={(props) => {
       return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
+      }} />
+      <Route path="/animals/new" render={(props) => {
+      return <AnimalForm {...props} />
       }} />
 
 
