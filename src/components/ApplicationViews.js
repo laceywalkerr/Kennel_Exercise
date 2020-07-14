@@ -28,13 +28,16 @@ const ApplicationViews = () => {
 
       <Route path="/login" component={Login} />
 
-      <Route path="/animals/:animalId(\d+)/edit" render={props => {
+                           {/* **************START ANIMALS************** */}
+
+      <Route exact path="/animals/:animalId(\d+)/edit" render={props => {
         if (isAuthenticated()) {
           return <AnimalEditForm {...props} />
         } else {
           return <Redirect to="/login" />
         }
       }} />
+      
       <Route exact path="/animals/:animalId(\d+)" render={props => {
         if (isAuthenticated()) {
           return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
@@ -42,7 +45,7 @@ const ApplicationViews = () => {
           return <Redirect to="/login" />
         }
       }} />
-
+      
       <Route exact path="/animals" render={props => {
         if (isAuthenticated()) {
            return <AnimalList {...props} />
@@ -50,14 +53,16 @@ const ApplicationViews = () => {
            return <Redirect to="/login" />
         }
       }} />
-      />
+
       <Route path="/animals/:animalId(\d+)" render={(props) => {
       return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
       }} />
+
       <Route path="/animals/new" render={(props) => {
       return <AnimalForm {...props} />
       }} />
 
+                              {/* **************END ANIMALS************** */}
 
       <Route
         path="/locations"

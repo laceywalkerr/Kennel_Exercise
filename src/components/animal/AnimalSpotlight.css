@@ -1,4 +1,4 @@
-/* .animal-spotlight {
+.animal-spotlight {
     max-width: 400px;
     display: flex;
     border: 1px dashed gray;
@@ -12,4 +12,7 @@
   
   .animal-spotlight p {
     color: black;
-  } */
+  }
+
+
+  
