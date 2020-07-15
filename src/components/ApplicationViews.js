@@ -12,7 +12,11 @@ import Login from "./auth/Login";
 import AnimalEditForm from "./animal/AnimalEditForm";
 import EmployeeWithAnimals from "./employee/EmployeeWithAnimals";
 
-const ApplicationViews = () => {
+const ApplicationViews = (props) => {
+
+  const hasUser = props.hasUser;
+  const setUser = props.setUser;
+
   const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
   return (
     <React.Fragment>
@@ -24,7 +28,9 @@ const ApplicationViews = () => {
         }}
       />
 
-      <Route path="/login" component={Login} />
+      <Route path="/login" render={props => {
+        return <Login setUser={setUser} {...props} />
+      }} />
 
                            {/* **************START ANIMALS************** */}
 
@@ -45,7 +51,7 @@ const ApplicationViews = () => {
       }} />
       
       <Route exact path="/animals" render={props => {
-        if (isAuthenticated()) {
+        if (hasUser) {
            return <AnimalList {...props} />
         } else {
            return <Redirect to="/login" />
@@ -90,7 +96,6 @@ const ApplicationViews = () => {
           return <OwnerList />;
         }}
       />
-
 
     </React.Fragment>
   );
